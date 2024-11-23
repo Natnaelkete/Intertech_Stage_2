@@ -6,6 +6,7 @@ const allBooks = new mongoose.Schema(
     author: String,
     isbn: String,
     publishedYear: String,
+    favorite: [{ type: mongoose.Schema.Types.ObjectId, ref: "Books" }],
   },
   { timestamps: true }
 );
